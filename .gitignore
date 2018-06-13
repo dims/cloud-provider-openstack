@@ -140,6 +140,7 @@ zz_generated.openapi.go
 /openstack-cloud-controller-manager
 /cinder-flex-volume-driver
 /cinder-provisioner
+/manila-provisioner
 /k8s-keystone-auth
 /cinder-csi-plugin
 /octavia-ingress-controller

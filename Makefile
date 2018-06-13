@@ -58,7 +58,7 @@ endif
 depend-update: work
 	dep ensure -update
 
-build: openstack-cloud-controller-manager cinder-provisioner cinder-flex-volume-driver cinder-csi-plugin k8s-keystone-auth client-keystone-auth octavia-ingress-controller
+build: openstack-cloud-controller-manager manila-provisioner cinder-provisioner cinder-flex-volume-driver cinder-csi-plugin k8s-keystone-auth client-keystone-auth octavia-ingress-controller
 
 openstack-cloud-controller-manager: depend $(SOURCES)
 	CGO_ENABLED=0 GOOS=$(GOOS) go build \
@@ -174,7 +174,7 @@ install-distro-packages:
 	tools/install-distro-packages.sh
 
 clean:
-	rm -rf _dist .bindep openstack-cloud-controller-manager cinder-flex-volume-driver cinder-provisioner cinder-csi-plugin k8s-keystone-auth client-keystone-auth octavia-ingress-controller
+	rm -rf _dist .bindep openstack-cloud-controller-manager cinder-flex-volume-driver manila-provisioner cinder-provisioner cinder-csi-plugin k8s-keystone-auth client-keystone-auth octavia-ingress-controller
 
 realclean: clean
 	rm -rf vendor
